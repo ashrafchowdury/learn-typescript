@@ -1,24 +1,43 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Container } from "./components/Container";
+import { Button } from "./components/Events/Button";
+import { Input } from "./components/Events/Input";
+import { Greet } from "./components/Greet";
+import { Component } from "./components/Heading/Component";
+import { Heading } from "./components/Heading/Heading";
+import { LodggedIn } from "./components/hooks/LodggedIn";
+import { Person } from "./components/Person";
+import { PersonList } from "./components/PersonList";
+import { Status } from "./components/Status";
 
 function App() {
+  const personName = {
+    first: "Ashraf",
+    last: "Chowdury",
+  };
+  const nameList = [
+    {
+      first: "Ashraf",
+      last: "Chowdury",
+    },
+    {
+      first: "Sahil",
+      last: "Chowdury",
+    },
+  ];
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Greet name="Ashraf" count={10} auth={true} />
+      <Person name={personName} />
+      <PersonList names={nameList} />
+      <Status status="loading" />
+      <Heading>Ashraf</Heading>
+      <Component>
+        <Heading>Component Data</Heading>
+      </Component>
+      <Button handleClick={(event, id) => console.log("button", event, id)} />
+      <Input value="" handleChnage={(event) => console.log(event)} />
+      <Container styles={{ color: "red", fontSize: "48px" }} />
+   <LodggedIn />
     </div>
   );
 }
