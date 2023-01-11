@@ -1,4 +1,8 @@
 import { Container } from "./components/Container";
+import { Box } from "./components/context/Box";
+import { ThemeContextProvider } from "./components/context/ThemeContext";
+import { User } from "./components/context/User";
+import { UserContextProvider } from "./components/context/UserContext";
 import { Button } from "./components/Events/Button";
 import { Input } from "./components/Events/Input";
 import { Greet } from "./components/Greet";
@@ -37,7 +41,13 @@ function App() {
       <Button handleClick={(event, id) => console.log("button", event, id)} />
       <Input value="" handleChnage={(event) => console.log(event)} />
       <Container styles={{ color: "red", fontSize: "48px" }} />
-   <LodggedIn />
+      <LodggedIn />
+      <ThemeContextProvider>
+        <Box />
+      </ThemeContextProvider>
+      <UserContextProvider>
+        <User />
+      </UserContextProvider>
     </div>
   );
 }

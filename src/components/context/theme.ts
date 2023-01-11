@@ -1,2 +1,4 @@
-
-export const theme = {}
+export const theme = {
+  primary: "#546552",
+  secondary: "#453543",
+};
