@@ -10,9 +10,13 @@ import { Greet } from "./components/Greet";
 import { Component } from "./components/Heading/Component";
 import { Heading } from "./components/Heading/Heading";
 import { LodggedIn } from "./components/hooks/LodggedIn";
+import { CustomButton } from "./components/html/CustomButton";
 import { Person } from "./components/Person";
 import { PersonList } from "./components/PersonList";
+import { Text } from "./components/polymorphic/Text";
+import { RandomNumber } from "./components/restriction/RandomNumber";
 import { Status } from "./components/Status";
+import { Toast } from "./components/Toast";
 
 function App() {
   const personName = {
@@ -50,7 +54,26 @@ function App() {
         <User />
       </UserContextProvider>
 
-      <Counter message='Ashraf' />
+      <Counter message="Ashraf" />
+      <RandomNumber value={10} isPositive isNegative isZero />
+      <Toast position="center" />
+      <CustomButton
+        variant="primary"
+        onClick={() => console.log("custon button click")}
+      >
+        Custom Button
+      </CustomButton>
+      <div>
+        <Text as="h1" size="sm">
+          Small
+        </Text>
+        <Text as="p" size="md">
+          Medium
+        </Text>
+        <Text as="span" size="lg" color="primary">
+          Large
+        </Text>
+      </div>
     </div>
   );
 }
