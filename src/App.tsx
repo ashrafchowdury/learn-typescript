@@ -17,6 +17,7 @@ import { Text } from "./components/polymorphic/Text";
 import { RandomNumber } from "./components/restriction/RandomNumber";
 import { Status } from "./components/Status";
 import { Toast } from "./components/Toast";
+import Todo from "./projects/ToDo/Todo";
 
 function App() {
   const personName = {
@@ -74,6 +75,8 @@ function App() {
           Large
         </Text>
       </div>
+
+      <Todo />
     </div>
   );
 }
