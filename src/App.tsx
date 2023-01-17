@@ -17,6 +17,7 @@ import { Text } from "./components/polymorphic/Text";
 import { RandomNumber } from "./components/restriction/RandomNumber";
 import { Status } from "./components/Status";
 import { Toast } from "./components/Toast";
+import { Product } from "./projects/BulkData/Product/Product";
 import Todo from "./projects/ToDo/Todo";
 
 function App() {
@@ -77,6 +78,7 @@ function App() {
       </div>
 
       <Todo />
+      <Product />
     </div>
   );
 }
