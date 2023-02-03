@@ -1,1 +1,1 @@
-# Learning Typescript with ReactJs
+# Learning Typescript with React
